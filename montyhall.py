@@ -2,7 +2,7 @@ import random
 
 vitoriasCarmem = []
 vitoriasMeulindo = []
-simulacoes = 100000000
+simulacoes = 10000000
 
 
 
@@ -12,17 +12,15 @@ for _ in range(simulacoes):
     carmem = random.randint(1,3)
     meulindo = carmem
     
-    # print(premio, carmem)
     if carmem == premio:
         vitoriasCarmem.append(carmem)
     
-    if meulindo == premio: 
-        vitoriasMeulindo.append(meulindo)
+    if meulindo == premio:
+        pass
     else:
-        portas.remove(meulindo)
-        meulindoDois = random.choice(portas)
-        if meulindoDois == premio:
-            vitoriasMeulindo.append(meulindo)
+        vitoriasMeulindo.append(meulindo)
+    
+
         
 
 percentualCarmem = (len(vitoriasCarmem)/simulacoes) * 100
